@@ -1,0 +1,46 @@
+.animation-list {
+    transition: all 0.5s linear;
+    animation-name: toLeft; // toBottom
+    animation-duration: 0.5s; // 注释掉 会没有动画 就是帕帕一帧一帧的出来
+    animation-fill-mode: both;
+}
+
+@keyframes toLeft {
+  0% {
+    opacity: 0;
+    transform: translate3d(50px, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+      opacity: 0;
+      transform: translateX(-60%);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(-120%);
+  }
+}
+.nav-forum-animate-enter-active {
+  animation: fadeInLeft .5s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(25px)
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0)
+  }
+}
+.nav-animate-enter-active {
+  animation: fadeInUp .3s ease-in-out;
+}

@@ -1,0 +1,124 @@
+@import './base.scss';
+@import './reset.scss';
+@import './rem.scss';
+
+@media screen and (max-width: 1024px) {
+    .ot-content {
+        margin: 0;
+        padding: 10px 5%;
+        box-shadow: none;
+    }
+}
+
+// 按钮
+.btn {
+    display: inline-block;
+    padding: 0 30px;
+    border: 0;
+    border-radius: 3px;
+    background-color: $colorPrimary;
+    color: $colorTextBtn;
+    line-height: 35px;
+    text-align: center;
+    cursor: pointer;
+}
+
+// 输入框
+.input {
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    color: $colorTextGeneral;
+    caret-color: $colorTextGeneral;
+    -webkit-appearance: none;
+    background-color: #fff;
+}
+
+.textarea {
+    width: 100%;
+    padding: 10px;
+    min-height: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    font-size: 14px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    color: $colorTextGeneral;
+    caret-color: $colorTextGeneral;
+    overflow-y: visible;
+}
+
+.input:focus {
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(0, 0, 0, .6);
+}
+
+.textarea:focus {
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(0, 0, 0, .6);
+}
+
+// 列表
+.ot-cells {
+    position: relative;
+    width: 100%;
+    padding: 10px 0;
+    justify-content: space-between;
+}
+
+.ot-cells::before {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 1px;
+    background-color: $colorLine;
+}
+
+.ot-cell {
+    position: relative;
+    min-height: 100px;
+    padding: 10px;
+    display: flex;
+    -webkit-box-align: center;
+    word-wrap: break-word;
+    justify-content: space-between;
+}
+
+.ot-cell::after {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    background-color: $colorLine;
+}
+
+// 链接
+.link {
+    color: $colorPrimary;
+    cursor: pointer;
+}
+
+// markdown 样式
+.markdown {
+    width: 100%;
+    ol li {
+        list-style-position: inside;
+    }
+    img {
+        max-width: 80%;
+        height: auto;
+    }
+}
+.markdown-body h3 {
+    font-size: 1.05em;
+    color: #868686;
+}
+hr {
+    height: 1px;
+    border: none;
+    border-top: 1px solid $colorLine;
+}

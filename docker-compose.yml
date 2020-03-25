@@ -1,0 +1,18 @@
+# create a docker-compose.yml file
+version: "2"
+services:
+  web:
+    build: .
+    ports:
+      - "8006:8006"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8006
+      - TARGET=http://192.168.4.28:8081
+      - NODE_ENV=production
+    #volumes:
+    #  - .:/app
+      #- ./package.json:/app/package.json:z
+      #- ./src:/app/src
+      #- ./config:/app/config
+      #- ./build:/app/build

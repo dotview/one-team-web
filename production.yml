@@ -1,0 +1,16 @@
+# create a docker-compose.yml file
+version: "3"
+services:
+  web:
+    container_name: one-team-web
+    build:
+      context: .
+      dockerfile: ./deploy/Dockerfile
+    ports:
+      - "8006:8006"
+    environment:
+      - APIPORT=8081
+      - APIHOST=192.168.4.28
+    external_links:
+      - one-team-server:oneteamweb-back
+

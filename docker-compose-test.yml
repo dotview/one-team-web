@@ -1,0 +1,17 @@
+# create a docker-compose.yml file
+version: "3"
+services:
+  web-test:
+    container_name: one-team-web-test
+    build:
+      context: .
+      dockerfile: ./deploy/Dockerfile
+    ports:
+      - "18006:8006"
+    environment:
+      - APIPORT=18081
+      - APIHOST=192.168.4.28
+      - NODE_ENV=testing
+    external_links:
+      - one-team-server-test:oneteamweb-back
+
