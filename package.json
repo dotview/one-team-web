@@ -29,7 +29,7 @@
         "mini-css-extract-plugin": "^0.5.0",
         "moment": "^2.23.0",
         "node": "^9.11.0",
-        "node-sass": "^4.7.2",
+        "node-sass": "^7.0.0",
         "sass-loader": "^6.0.7",
         "simplemde": "^1.11.2",
         "vue": "^2.6.10",
